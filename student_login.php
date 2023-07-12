@@ -521,7 +521,7 @@ font-weight: bold;
             <!-- <h2>login as student</h2> -->
             <div class="col-md-12 mb-3">
               <!-- <label for="validationCustom01"><b>Email ID/ Mobile Number <span style="color: red">*</span></b></label> -->
-              <center><input class="form-control" type="text" name="email" id="validationCustom01" required placeholder="Email or phone" style="background-color: #ccc;width: 80%;color: black;align-content: center;border-radius: 7px 7px 7px 7px;"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"-->
+              <center><input class="form-control" type="email" name="email" max="50" id="validationCustom01" required placeholder="Email or phone" style="background-color: #ccc;width: 80%;color: black;align-content: center;border-radius: 7px 7px 7px 7px;"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"-->
               <div class="invalid-feedback">
                 <small>Please enter your valid email as (e.g : johndeo@gmail.com) or Mobile Number</small>
               </div>
@@ -529,7 +529,7 @@ font-weight: bold;
 
             <div class="col-md-12 mb-3">
              <!--<label for="validationCustom01"><b>Password <span style="color: red">*</span></b></label>  updated anamika 21 APR 23-->
-              <center><input class="form-control" type="password" name="password" id="validationCustom02" required placeholder="Password" style="background-color: #ccc;width: 80%;align-content: center;border-radius: 7px 7px 7px 7px;">
+              <center><input class="form-control" type="password" name="password" id="validationCustom02" min="8" max="20" required placeholder="Password" style="background-color: #ccc;width: 80%;align-content: center;border-radius: 7px 7px 7px 7px;">
               <div class="invalid-feedback">
                 <small>Please enter your valid password as (e.g : xxxxxx)</small>
               </div>

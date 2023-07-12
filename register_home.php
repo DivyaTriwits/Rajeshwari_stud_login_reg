@@ -293,7 +293,7 @@ label {
                   <div class="row">
                       <div class="col-md-12 mb-2 " style="margin-bottom: 1rem!important;">
                        
-                        <input class="form-control" type="text" name="fullname" id="fullname" pattern="[a-zA-Z\s]+" placeholder="Full Name" required style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input class="form-control" type="text" name="fullname" id="fullname" pattern="[a-zA-Z\s]{4,200}" placeholder="Full Name" required style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         
                         <div class="invalid-feedback">
                            <small>Please enter your Full name (e.g : John)</small>
@@ -331,14 +331,14 @@ label {
                      </div>
                      <div class="col-md-6 mb-2 " style="margin-bottom: 1rem!important;">
                         
-                        <input class="form-control" type="text" autofill="false" name="mobile_number" id="mobile_no" pattern="^[0-9]*$" required placeholder="Mobile number" maxlength="10" minlength="10" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input class="form-control" type="tel" autofill="false" name="mobile_number" id="mobile_no" pattern="[6-9]{1}[0-9]{9}" required placeholder="Mobile number" max="10" min="10" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         <div class="invalid-feedback">
                            <small>Please enter your mobile no.</small>
                         </div>
                      </div>
                      <div class="col-md-6 mb-2" style="margin-bottom: 1rem!important;">
                     
-                        <input class="form-control" type="email" name="email" id="email"  required placeholder="Email" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input class="form-control" type="email" name="email" id="email" max="50" required placeholder="Email" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         <div class="invalid-feedback">
                            <small>Please enter your valid email id (e.g : john@gmail.com)</small>
                         </div>
@@ -346,14 +346,14 @@ label {
                    
                
                         <div class="col-md-6 mb-4" style="margin-bottom: 1rem!important;">
-                        <input class="form-control" type="password"  name="password" id="password" minlength="8" required placeholder="Create password" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input class="form-control" type="password"  name="password" id="password" min="8" max="20" required placeholder="Create password" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         <div class="invalid-feedback">
                            <small>Please enter a password, minimum length is 8.</small>
                         </div>
                      </div>
                      <div class="col-md-6 mb-2" style="margin-bottom: 1rem!important;">
                        
-                        <input class="form-control" type="password" name="confirm_password" id="cpassword" required placeholder="Confirm password" minlength="8" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input class="form-control" type="password" name="confirm_password" id="cpassword" required placeholder="Confirm password" min="8" max="20" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         
                         <div class="invalid-feedback">
                            <small>Please confirm your password, minimum length is 8.</small>
