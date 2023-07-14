@@ -506,7 +506,7 @@ font-weight: bold;
          <!-- <?php $id = urldecode($_GET['sid']); 
           //print_r($id);
         ?> --><br><br><br><br><br>
-          <form method="post" class="needs-validation" novalidate action="<?php echo base_url('verified-login')?><?php echo ($this->input->get('redirect-to') != '') ? '?redirect-to='.$this->input->get('redirect-to') : '' ;?>">
+          <form id="addLoginForm" method="post" class="needs-validation" novalidate action="<?php echo base_url('verified-login')?><?php echo ($this->input->get('redirect-to') != '') ? '?redirect-to='.$this->input->get('redirect-to') : '' ;?>">
             
                   <div class="logo" align="center" style="padding-right: 55px;">
                     <a href="<?php echo base_url();?>">
@@ -521,7 +521,7 @@ font-weight: bold;
             <!-- <h2>login as student</h2> -->
             <div class="col-md-12 mb-3">
               <!-- <label for="validationCustom01"><b>Email ID/ Mobile Number <span style="color: red">*</span></b></label> -->
-              <center><input class="form-control" type="email" name="email" max="50" id="validationCustom01" required placeholder="Email or phone" style="background-color: #ccc;width: 80%;color: black;align-content: center;border-radius: 7px 7px 7px 7px;"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"-->
+              <center><input class="form-control" type="email" name="email" id="validationCustom01" required placeholder="Email or phone" style="background-color: #ccc;width: 80%;color: black;align-content: center;border-radius: 7px 7px 7px 7px;"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"-->
               <div class="invalid-feedback">
                 <small>Please enter your valid email as (e.g : johndeo@gmail.com) or Mobile Number</small>
               </div>
@@ -591,4 +591,51 @@ font-weight: bold;
 </div>
 </form>
 </div>
-</div></div></div></div></div></body></html>
+</div></div></div></div></div>
+<!-- BootstrapValidator JS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+        <script>
+  $(document).ready(function() {
+    $('#addLoginForm').bootstrapValidator({
+  
+
+        fields: {     
+           email: {
+                message: 'Email id is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'Email id is required and cannot be empty'
+                    },
+                     stringLength: {
+                        min:6,
+                        max: 30,
+                        message: 'Email id must be 6 to 30 characters long'
+                    },
+                   
+                   regexp: {
+                        regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                     message: 'Only letters(a-z), numbers(0-9) and periods(.) are allowed'
+                    },
+                }
+            },
+          password: {
+                message: 'Enter the password',
+                validators: {
+                    notEmpty: {
+                        message: 'Password is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 8,
+                        max: 20,
+                        message: 'Enter the password'
+                    },
+                }
+            },
+     
+        }
+    }).on('success.form.bv', function(e) {
+      $(this)[0].submit();
+    });
+});
+</script>
+</body></html>
