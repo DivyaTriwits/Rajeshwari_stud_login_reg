@@ -1,4 +1,9 @@
-			<div class="main-content pt-5 mt-5">
+<!--bootstrap validation-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+
+    			<div class="main-content pt-5 mt-5">
 				<div class="container fuild">
 
 					<!-- Page Header -->
@@ -83,18 +88,12 @@
 </Script>
 <?php }?>
 
-
-
+<!-- BootstrapValidator JS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
 <script>        
 $(document).ready(function() {
     // alert();
     $('#passwordForm').bootstrapValidator({
-        message: 'This value is not valid',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
          fields: {
             old_password: {
                 validators: {
@@ -102,9 +101,9 @@ $(document).ready(function() {
                         message: 'Password is required'
                     },
                     stringLength: {
-                        min: 5,
-                        max: 16,
-                        message: 'Password must be more than 4 and less than 17 characters long'
+                        min: 8,
+                        max: 20,
+                        message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
                     }
                 }
                 
@@ -115,9 +114,9 @@ $(document).ready(function() {
                         message: 'New password is required'
                     },
                     stringLength: {
-                        min: 5,
-                        max: 16,
-                        message: 'Password must be more than 4 and less than 17 characters long'
+                        min: 8,
+                        max: 20,
+                        message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
                     },
                     // identical: {
                     //     field: 'confirm_password',

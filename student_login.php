@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>website_assets/testimonial/css/plugins/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>website_assets/testimonial/css/plugins/aos.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>website_assets/testimonial/css/plugins/selectric.css" />
+    <!--bootstrap validation-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo base_url();?>website_assets/js/vendor/modernizr-2.8.3.min.js"></script>

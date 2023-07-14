@@ -1,3 +1,7 @@
+<!--bootstrap validation-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
 
 <!-- Main Content-->
 <div class="main-content pt-4 mt-5 mb-5">
@@ -31,7 +35,7 @@
 							</div>
 
 
-							<form id=studentsPersonalForm method="POST" enctype="multipart/form-data" action="<?php echo base_url('update-personal-details')?>">
+							<form id=updateStudentProfile method="POST" enctype="multipart/form-data" action="<?php echo base_url('update-personal-details')?>">
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
@@ -52,7 +56,7 @@
 
 											<input pattern="[0-9]{1,10}"  maxlength="10"  
 											oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"
-											type="text" class="form-control" name="mobile" value="<?php if($getRegistrationsData!=''){echo $getRegistrationsData->student_mobile_no;}?>" placeholder="Whatsapp Number" readonly>
+											type="text" class="form-control" name="mobile" value="<?php if($getRegistrationsData!=''){echo $getRegistrationsData->student_mobile_no;}?>" placeholder="Mobile Number" readonly>
 
 										</div>
 									</div>
@@ -60,7 +64,7 @@
 										<div class="form-group">
 											<p class="mg-b-10">Whatsapp Number <span class="tx-danger">*</span></p>
 
-											<input pattern="[0-9]{1,10}"  maxlength="10"  
+											<input maxlength="10"  
 											oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"
 											type="text" class="form-control" name="whatsapp" value="<?php if($getRegistrationsData!=''){echo $getRegistrationsData->student_whatsapp_no;}?>" placeholder="Whatsapp Number">
 
@@ -154,7 +158,7 @@
 								
 									</select>
 
-                                    <!-- we are commenting this beacuse we wanted to replace this with the dropdown option   varun 28 June 23-->
+                                     we are commenting this beacuse we wanted to replace this with the dropdown option   varun 28 June 23-->
 		
 
 											<input type="text" class="form-control" name="family_annual_income" value="<?php if($getFamilyDetails!=''){echo $getFamilyDetails->family_annual_income;}?>"placeholder="Family Income"> 								
@@ -509,3 +513,90 @@
 
 			});
 		</script>
+		<!-- BootstrapValidator JS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+        <script>
+  $(document).ready(function() {
+    $('#updateStudentProfile').bootstrapValidator({
+  
+
+        fields: {
+        	whatsapp: {
+                message: 'Enter 10 digit mobile no',
+                validators: {
+                    notEmpty: {
+                        message: 'Enter 10 digit mobile no'
+                    },
+                    stringLength: {
+                        min: 10,
+                        max: 10,
+                        message: 'Enter 10 digit mobile no'
+                    },
+                   regexp: {
+                        regexp: /^[6-9]{1}[0-9]{9}$/,
+                        message: 'Enter 10 digit mobile no'
+                    },
+                }
+            },
+          qualification: {
+            validators: {
+              notEmpty: {
+                message: 'Qualification is required '
+              },
+            }
+          },
+          current_class_or_degree: {
+          	validators: {
+          		notEmpty: {
+                message: 'Course is required'
+          		}
+          	}
+          },
+          college: {
+          	validators: {
+          		notEmpty: {
+          			message: 'College name is required'
+          		}
+          	}
+          },
+          student_studying_state: {
+          	validators: {
+          		notEmpty: {
+          			message: 'State of the student is required'
+          		}
+          	}
+          },
+          student_studying_district: {
+          	validators: {
+          		notEmpty: {
+          			message: 'District of the student is required'
+          		}
+          	}
+          },
+          family_annual_income: {
+          	validators: {
+          		notEmpty: {
+          			message: 'Family income is required'
+          		}
+          	}
+          },
+          gender: {
+          	validators: {
+          		notEmpty: {
+          			message: 'Gender is required'
+          		},
+          		stringLength: {
+                        max: 10,
+                    },
+                     regexp: {
+                        regexp: /^[a-zA-Z\s]*$/,
+                        message: 'Only characters are allowed'
+                    },
+          	}
+          }
+        }
+    }).on('success.form.bv', function(e) {
+      $(this)[0].submit();
+    });
+});
+</script>
