@@ -39,10 +39,14 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/testimonial/css/plugins/selectric.css" />
         <link href="<?php echo base_url()?>assets/plugins/sweet-alert/sweetalert.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo base_url();?>website_assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script> -->
+     <!-- BootstrapValidator JS -->
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
         <script src="<?php echo base_url()?>assets/plugins/sweet-alert/sweetalert.min.js"></script>
         <script src="<?php echo base_url()?>assets/plugins/sweet-alert/jquery.sweet-alert.js"></script>
     <script>
@@ -289,7 +293,7 @@ label {
         <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6" id="registration" style="padding: 0 20px 0 20px;">
             <div class="login-form-area register-form-area">
-               <form autocomplete="off" method="post" class="needs-validation" novalidate action="<?php echo base_url()?>add-student-details">
+               <form id="addStudentForm" autocomplete="off" method="post" class="needs-validation" novalidate action="<?php echo base_url()?>add-student-details">
                   <div class="row">
                       <div class="col-md-12 mb-2 " style="margin-bottom: 1rem!important;">
                        
@@ -613,5 +617,97 @@ label {
       }
     }
 </style>
+<!-- BootstrapValidator JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+        <script>
+  $(document).ready(function() {
+    $('#addStudentForm').bootstrapValidator({
+  
+
+        fields: {
+          fullname: {
+            validators: {
+              notEmpty: {
+                message: 'Full name is required '
+              },
+               stringLength: {
+                        min: 4,
+                        max: 100,
+                        message: 'Full name must be 4 to 100 characters long'
+                    },
+                     regexp: {
+                        regexp: /^[a-zA-Z\s]*$/,
+                        message: 'Enter the valid name'
+                    },
+            }
+          },
+           mobile_number: {
+                message: 'Enter a valid mobile number',
+                validators: {
+                    notEmpty: {
+                        message: 'The mobile number is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 10,
+                        max: 10,
+                        message: 'Enter a valid mobile number'
+                    },
+                   regexp: {
+                        regexp: /^[6-9]{1}[0-9]{9}$/,
+                        message: 'Enter a valid mobile number'
+                    },
+                }
+            },
+           email: {
+                message: 'Email id is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'Email id is required and cannot be empty'
+                    },
+                     stringLength: {
+                        min:6,
+                        max: 30,
+                        message: 'Email id must be 6 to 30 characters long'
+                    },
+                   
+                   regexp: {
+                        regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                     message: 'Only letters(a-z), numbers(0-9) and periods(.) are allowed'
+                    },
+                }
+            },
+          password: {
+                message: 'Enter the password',
+                validators: {
+                    notEmpty: {
+                        message: 'Password is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 8,
+                        max: 20,
+                        message: 'Enter the password'
+                    },
+                }
+            },
+             confirm_password: {
+                message: 'Enter the password',
+                validators: {
+                    notEmpty: {
+                        message: 'Password is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 8,
+                        max: 20,
+                        message: 'Enter the password'
+                    },
+                }
+            },
+     
+        }
+    }).on('success.form.bv', function(e) {
+      $(this)[0].submit();
+    });
+});
+</script>
 </body>
 </html>
