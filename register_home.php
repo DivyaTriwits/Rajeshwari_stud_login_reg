@@ -332,7 +332,7 @@ label {
                      </div>
                      <div class="col-md-6 mb-2 " style="margin-bottom: 1rem!important;">
                         
-                        <input class="form-control" type="tel" autofill="false" name="mobile_number" id="mobile_no" pattern="[6-9]{1}[0-9]{9}" required placeholder="Mobile number" max="10" min="10" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
+                        <input maxlength="10" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)" class="form-control" type="text" autofill="false" name="mobile_number" id="mobile_no" required placeholder="Mobile number" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         <div class="invalid-feedback">
                            <small>Please enter your mobile no.</small>
                         </div>
@@ -639,37 +639,37 @@ label {
             }
           },
            mobile_number: {
-                message: 'Enter a valid mobile number',
+                message: 'Enter 10 digit mobile no',
                 validators: {
                     notEmpty: {
-                        message: 'The mobile number is required and cannot be empty'
+                        message: 'Enter 10 digit mobile no'
                     },
                     stringLength: {
                         min: 10,
                         max: 10,
-                        message: 'Enter a valid mobile number'
+                        message: 'Enter 10 digit mobile no'
                     },
                    regexp: {
                         regexp: /^[6-9]{1}[0-9]{9}$/,
-                        message: 'Enter a valid mobile number'
+                        message: 'Enter 10 digit mobile no'
                     },
                 }
             },
            email: {
-                message: 'Email id is not valid',
+                message: 'Enter standard email format with . & @',
                 validators: {
                     notEmpty: {
-                        message: 'Email id is required and cannot be empty'
+                        message: 'Enter standard email format with . & @'
                     },
                      stringLength: {
                         min:6,
                         max: 30,
-                        message: 'Email id must be 6 to 30 characters long'
+                        message: 'Enter standard email format with . & @'
                     },
                    
                    regexp: {
                         regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                     message: 'Only letters(a-z), numbers(0-9) and periods(.) are allowed'
+                     message: 'Enter standard email format with . & @'
                     },
                 }
             },
@@ -682,20 +682,20 @@ label {
                     stringLength: {
                         min: 8,
                         max: 20,
-                        message: 'Enter the password'
+                        message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
                     },
                 }
             },
              confirm_password: {
-                message: 'Enter the password',
+                message: 'Please enter same as password',
                 validators: {
                     notEmpty: {
-                        message: 'Password is required and cannot be empty'
+                        message: 'Please enter same as password'
                     },
                     stringLength: {
                         min: 8,
                         max: 20,
-                        message: 'Enter the password'
+                        message: 'Please enter same as password'
                     },
                 }
             },

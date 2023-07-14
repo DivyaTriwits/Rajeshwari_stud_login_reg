@@ -601,20 +601,20 @@ font-weight: bold;
 
         fields: {     
            email: {
-                message: 'Email id is not valid',
+                message: 'Enter standard email format with . & @',
                 validators: {
                     notEmpty: {
-                        message: 'Email id is required and cannot be empty'
+                        message: 'Enter standard email format with . & @'
                     },
                      stringLength: {
                         min:6,
                         max: 30,
-                        message: 'Email id must be 6 to 30 characters long'
+                        message: 'Enter standard email format with . & @'
                     },
                    
                    regexp: {
                         regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                     message: 'Only letters(a-z), numbers(0-9) and periods(.) are allowed'
+                     message: 'Enter standard email format with . & @'
                     },
                 }
             },
@@ -627,7 +627,7 @@ font-weight: bold;
                     stringLength: {
                         min: 8,
                         max: 20,
-                        message: 'Enter the password'
+                        message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
                     },
                 }
             },
