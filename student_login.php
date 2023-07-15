@@ -530,7 +530,7 @@ font-weight: bold;
 
             <div class="col-md-12 mb-3">
              <!--<label for="validationCustom01"><b>Password <span style="color: red">*</span></b></label>  updated anamika 21 APR 23-->
-              <center><input class="form-control" type="password" name="password" id="validationCustom02" min="8" max="20" required placeholder="Password" style="background-color: #ccc;width: 80%;align-content: center;border-radius: 7px 7px 7px 7px;">
+              <center><input class="form-control" type="password" name="password" id="validationCustom02" required placeholder="Password" style="background-color: #ccc;width: 80%;align-content: center;border-radius: 7px 7px 7px 7px;">
               <div class="invalid-feedback">
                 <small>Please enter your valid password as (e.g : xxxxxx)</small>
               </div>
@@ -602,21 +602,19 @@ font-weight: bold;
 
         fields: {     
            email: {
-                message: 'Enter standard email format with . & @',
+                message: 'Enter standard email format with . & @ or mobile no',
                 validators: {
                     notEmpty: {
-                        message: 'Enter standard email format with . & @'
+                        message: 'Enter standard email format with . & @ or mobile no'
                     },
                      stringLength: {
-                        min:6,
                         max: 30,
-                        message: 'Enter standard email format with . & @'
                     },
                    
-                   regexp: {
-                        regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                     message: 'Enter standard email format with . & @'
-                    },
+                   // regexp: {
+                   //      regexp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                   //   message: 'Enter standard email format with . & @'
+                   //  },
                 }
             },
           password: {
