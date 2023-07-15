@@ -1,0 +1,230 @@
+ <?php 
+   $backbutton=$this->Student_model->getbackbuttonredirection($this->uri->segment(1));
+      // $backbutton=$result->parent_uri;
+      ?>
+<!-- Main Footer-->
+<!-- Bottom Nav Bar -->
+<!-- <div class="main-footer text-center mb-0"> -->
+ <!-- <div class="main-footer text-center mb-0"> -->
+  <style type="text/css">
+  .footer
+  {
+    display: none;
+  }
+ @media only screen and (max-width: 600px) {
+  .footer {
+    display: block;
+      background-color:#ECEDEF;
+  }
+}
+
+</style>
+  <div class="main-footer text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <span>Copyright © <?php echo date('Y');?> <a target="_blank" href="<?php echo base_url();?>">The Global Scholarship</a>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- <?php echo base_url('/'.$backbutton)?> -->
+ <!--  <footer class="footer mr-5" id="footer">-->
+ <!--   <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">-->
+ <!--   <?php if($this->uri->segment(1)=='student-home'){?>-->
+ <!--    <a  href="<?php echo base_url('scholarships')?>"type="button" class="btn button-inactive">-->
+       <!-- <button> -->
+ <!--       <div class="selector-holder">-->
+
+        <!-- i class="material-icons">arrow_back</i> -->
+ <!--         <i class="material-icons">notification_important</i>-->
+ <!--        <span>Scholarships</span>-->
+ <!--      </div>-->
+    
+ <!--    </a>-->
+ <!--  <?php }else{?>-->
+ <!--     <a  href="<?php if($backbutton!='') echo base_url('/'.$backbutton)?>" type="button" class="btn button-inactive">-->
+      
+ <!--       <div class="selector-holder">-->
+
+ <!--        <i class="material-icons">arrow_back</i>-->
+ <!--        <span>Back</span>-->
+ <!--      </div>-->
+     
+ <!--    </a>-->
+ <!--  <?php }?>-->
+
+
+ <!--    <a  id="account" type="button" class="btn button-inactive" href="<?php echo base_url('student-home')?>">-->
+      
+ <!--       <div class="selector-holder">-->
+ <!--        <i class="material-icons">home</i>-->
+ <!--        <span>home</span>-->
+ <!--      </div>-->
+       
+ <!--    </a>-->
+
+
+ <!--    <a  id="account" type="button" class="btn button-inactive" href="<?php echo base_url('account-setting')?>">-->
+     
+ <!--       <div class="selector-holder">-->
+ <!--        <i class="material-icons">account_circle</i>-->
+ <!--        <span>Account</span>-->
+ <!--      </div>-->
+     
+ <!--    </a>-->
+ <!--  </div>-->
+ <!--</footer>-->
+<!-- </div>
+-->   <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+<!-- </div> -->
+<!-- Bootstrap core JavaScript -->
+<!--End Footer-->
+
+
+
+</div>
+<!-- End Page -->
+
+<!-- Back-to-top -->
+
+
+
+<!-- Jquery js-->
+<script src="<?php echo base_url()?>assets/plugins/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap js-->
+<script src="<?php echo base_url()?>assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+<!--Internal Apexchart js-->
+<script src="<?php echo base_url()?>assets/js/apexcharts.js"></script>
+
+<!-- Internal Chart.Bundle js-->
+<script src="<?php echo base_url()?>assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+
+<!-- Peity js-->
+<script src="<?php echo base_url()?>assets/plugins/peity/jquery.peity.min.js"></script>
+
+
+
+
+    <!-- Internal Data Table js -->
+    <script src="<?php echo base_url()?>assets/plugins/datatable/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/dataTables.responsive.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/dataTables.buttons.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/buttons.bootstrap4.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/jszip.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/pdfmake.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/vfs_fonts.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/buttons.html5.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/buttons.print.min.js"></script>
+    <script src="<?php echo base_url()?>assets/plugins/datatable/fileexport/buttons.colVis.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/table-data.js"></script>
+
+
+<!-- Perfect-scrollbar js -->
+<script src="<?php echo base_url()?>assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+<!-- Select2 js-->
+<script src="<?php echo base_url()?>assets/plugins/select2/js/select2.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/select2.js"></script>
+
+<!-- Sidebar js -->
+<script src="<?php echo base_url()?>assets/plugins/sidebar/sidebar.js"></script>
+
+<!-- INTERNAL INDEX js -->
+<script src="<?php echo base_url()?>assets/js/index.js"></script>
+
+<!-- Sticky js -->
+<script src="<?php echo base_url()?>assets/js/sticky.js"></script>
+
+<!-- Custom js -->
+<script src="<?php echo base_url()?>assets/js/custom.js"></script>
+
+<!-- Switcher js -->
+<script src="<?php echo base_url()?>assets/switcher/js/switcher.js"></script>
+
+<!-- Internal Clipboard js-->
+<script src="<?php echo base_url()?>assets/plugins/clipboard/clipboard.min.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/clipboard/clipboard.js"></script>
+
+<!-- Internal Prism js-->
+<script src="<?php echo base_url()?>assets/plugins/prism/prism.js"></script>
+<!-- Internal Gallery js-->
+<script src="<?php echo base_url()?>assets/plugins/gallery/picturefill.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lightgallery.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lightgallery-1.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-pager.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-autoplay.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-fullscreen.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-zoom.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-hash.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/gallery/lg-share.js"></script>
+<!-- Internal Sweet-Alert js-->
+<!-- Internal Owl Carousel js-->
+<script src="<?php echo base_url()?>assets/plugins/owl-carousel/owl.carousel.js"></script>
+<!-- Multislider js -->
+<script src="<?php echo base_url()?>assets/plugins/multislider/multislider.js"></script>
+<script src="<?php echo base_url()?>assets/js/carousel.js"></script>
+<!-- Internal Form-elements js-->
+<!-- <script src="<?php echo base_url()?>assets/js/form-elements.js"></script> -->
+<!-- Internal Jquery-Ui js-->
+<script src="<?php echo base_url()?>assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+
+<!-- Internal Jquery.maskedinput js-->
+<script src="<?php echo base_url()?>assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+<!-- Internal Specturm-colorpicker js-->
+<script src="<?php echo base_url()?>assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+
+<!-- Internal Ion-rangeslider js-->
+<script src="<?php echo base_url()?>assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+<script src="<?php echo base_url()?>assets/plugins/rating/jquery.barrating.js"></script>
+<script src="<?php echo base_url()?>assets/plugins/rating/ratings.js"></script>
+<!-- footer navbar -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
+<!-- JS needed for this page -->
+<script src="<?php echo base_url()?>assets/footernav/js/main.js"></script>
+<!-- Footer navbar -->
+<script type="text/javascript">
+	
+
+	$('#example-pill').barrating('show', {
+		theme: 'bars-pill',
+		initialRating: 'A',
+		showValues: true,
+		showSelectedRating: false,
+		allowEmpty: true,
+		emptyValue: '-- no rating selected --',
+		onSelect: function(value, text) {
+                // alert('Selected rating: ' + value);
+
+                document.getElementById('actualRating').value=value;
+              }
+            });
+
+          </script>
+          <script type="text/javascript">
+           $(document).ready(function(){
+            $('#back').on('click', function(){
+             <?php $send = $_SERVER['HTTP_REFERER'];?> 
+             var redirect_to="<?php echo $send;?>";             
+             window.location.href = redirect_to;
+           });
+          });
+        </script>
+
+
+
+
+
+      </body>
+</html>

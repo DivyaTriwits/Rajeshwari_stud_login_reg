@@ -609,7 +609,6 @@ font-weight: bold;
                     },
                      stringLength: {
                         max: 30,
-                        message: 'Enter standard email format with . & @ or mobile no'
                     },
                    
                    // regexp: {
@@ -624,11 +623,11 @@ font-weight: bold;
                     notEmpty: {
                         message: 'Password is required and cannot be empty'
                     },
-                    // stringLength: {
-                    //     min: 8,
-                    //     max: 20,
-                    //     message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
-                    // },
+                    stringLength: {
+                        min: 8,
+                        max: 20,
+                        message: 'Please enter 8 characters long combination of upper & lowercase, number & 1 special character'
+                    },
                 }
             },
      
