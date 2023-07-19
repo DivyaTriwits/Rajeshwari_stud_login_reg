@@ -363,10 +363,10 @@ label {
                      </div>
                      <div class="col-md-12 mb-2 " style="margin-bottom: 1rem!important;">
                      <input type="hidden" value="<?php echo $this->input->get('sid')?>" name="ad_scholarship_id">
-                      <input type="text" value="<?php echo $this->input->get('rcode')?>" name="rcode">
+                     <!--  <input type="text" value="<?php echo $this->input->get('rcode')?>" name="rcode">
                       <div id="recaptcha">
                        <div  class="g-recaptcha" data-sitekey="6Le9s5AhAAAAAMOzPXuijOmbjTwOi3X_UisSxVWV"></div>
-                       </div>
+                       </div> -->
                        </div>
                      <div class="col-md-6 mb-4 col-6" style="margin-bottom: 1rem!important;">
                         <a href="<?php echo base_url('student-login')?>" style="color: black;">Log-In instead </a>
