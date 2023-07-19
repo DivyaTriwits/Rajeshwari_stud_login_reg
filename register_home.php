@@ -340,9 +340,9 @@ label {
                      <div class="col-md-6 mb-2" style="margin-bottom: 1rem!important;">
                     
                         <input class="form-control" type="email" name="email" id="email" required placeholder="Email" style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
-                       <!--  <div class="invalid-feedback">
+                        <div class="invalid-feedback">
                            <small>Please enter your valid email id (e.g : john@gmail.com)</small>
-                        </div> -->
+                        </div>
                      </div>
                    
                
@@ -356,17 +356,17 @@ label {
                        
                         <input class="form-control" type="password" name="confirm_password" id="cpassword" required placeholder="Confirm password"style="background-color: #ccc;width: 100%; height: 45px !important;color: black;align-content: center;border-radius: 7px 7px 7px 7px;">
                         
-                       <!--  <div class="invalid-feedback">
+                        <div class="invalid-feedback">
                            <small>Please confirm your password, minimum length is 8.</small>
-                        </div> -->
+                        </div>
                         <span style="color:red;display:none;" id= "error-span">Passwords do not match..</span>
                      </div>
                      <div class="col-md-12 mb-2 " style="margin-bottom: 1rem!important;">
                      <input type="hidden" value="<?php echo $this->input->get('sid')?>" name="ad_scholarship_id">
                       <input type="text" value="<?php echo $this->input->get('rcode')?>" name="rcode">
-                     <!-- <div id="recaptcha">
+                      <div id="recaptcha">
                        <div  class="g-recaptcha" data-sitekey="6Le9s5AhAAAAAMOzPXuijOmbjTwOi3X_UisSxVWV"></div>
-                       </div> -->
+                       </div>
                        </div>
                      <div class="col-md-6 mb-4 col-6" style="margin-bottom: 1rem!important;">
                         <a href="<?php echo base_url('student-login')?>" style="color: black;">Log-In instead </a>
